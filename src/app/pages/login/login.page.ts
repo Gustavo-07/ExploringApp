@@ -12,4 +12,8 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+   ingresar(proveedor: string) {
+    console.log(proveedor);
+  }
+
 }

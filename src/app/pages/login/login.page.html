@@ -1,9 +1,51 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title id="titulo">
+      ExploringApp
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <div id="container">
+  
+    <div class="container">
+     <form class="form-signin">
+       <div class="text-center mb-4">
+       
+         <h1 class="h3 mb-3 font-weight-normal">
+           <font style="vertical-align: inherit;">
+             <font style="vertical-align: inherit;">Iniciar Sesión</font>
+           </font></h1>
+         </div>
+   
+         <div class="form-label-group">
+           <input type="email" id="inputEmail" class="form-control input_redondeado" placeholder="Dirección de correo electrónico" required="" autofocus="">
+           
+         </div>
+       <hr>
+         <div class="form-label-group">
+           <input type="password" id="inputPassword" class="form-control input_redondeado" placeholder="Contraseña" required="">
+         </div>
+       <hr>
+       <button class="btn btn-sm  btn-block btn_logueo" type="submit">
+         <font style="vertical-align: inherit;">
+           <font style="vertical-align: inherit; color: white;">Iniciar Sesión</font>
+         </font>
+         </button>
+        <hr>
+         <div class="form-label-group">
+           <p style="color: black;">Ó</p>
+         </div>
+         
+         <hr>
+         <button class="btn btn-sm  btn-block btn_google"  (click)="ingresar('Google')">
+              <i class="fa fa-google-plus icono_google"></i> Entrar con Google</button>
+           <button class="btn btn-sm  btn-block btn_registrarse" type="submit">
+             <font style="vertical-align: inherit;">
+               <font style="vertical-align: inherit;">Registrarse</font></font>
+             </button>
+       </form>
+    </div>
+   </div>
 </ion-content>
