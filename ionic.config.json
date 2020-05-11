@@ -1,5 +1,7 @@
 {
   "name": "ExploringAppValledupar",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

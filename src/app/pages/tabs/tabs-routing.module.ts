@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
       },
       {
+        path: 'mapa',
+        loadChildren: () => import('../mapa/mapa.module').then(m => m.MapaPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

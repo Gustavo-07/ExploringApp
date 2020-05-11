@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +12,8 @@ export class LoginPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
   }
 
-   ingresar(proveedor: string) {
-    console.log(proveedor);
-  }
 
-}
