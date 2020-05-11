@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'mapa',
     loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'registrar-sitio-turistico',
+    loadChildren: () => import('./pages/registrar-sitio-turistico/registrar-sitio-turistico.module').then( m => m.RegistrarSitioTuristicoPageModule)
   }
 ];
 @NgModule({

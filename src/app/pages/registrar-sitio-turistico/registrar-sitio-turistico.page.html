@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registrar Sitio Turistico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+ <div id="container">
+  <div class="container">
+     
+    <ion-item>
+      <img class="fa fa-file-image-o" [src]="imagenUrl" style="width: 90%; height: 200px;" id="img">
+    </ion-item>
+    <ion-item>
+      <ion-button>Seleccionar imagen</ion-button>
+    </ion-item>
+    <input type="file" #Image accept="image/jpg" (change)="entradaDeArchivo($event.target.files)"  name="imagen" required hidden>
+  
+      <ion-item>
+        <ion-label position="floating">Nombre del sitio </ion-label>
+        <ion-input type="text=" [(ngModel)]="sitioTuristico.nombre" name="nombre" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Tipo de sitio </ion-label>
+        <ion-input type="text=" [(ngModel)]="sitioTuristico.tipo" name="tipo" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Personal a cargo </ion-label>
+        <ion-input type="text=" [(ngModel)]="sitioTuristico.personalCargo" name="personalacargo" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Ubicación </ion-label>
+        <ion-input type="text=" [(ngModel)]="sitioTuristico.ubicacion" name="ubicacion" ></ion-input>
+        <ion-button>localizar</ion-button>
+      </ion-item>
+       
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input type="textarea" [(ngModel)]="sitioTuristico.descripcion" name="descripcion"></ion-input>
+      </ion-item>
+  
+      <ion-button expand="full" (click)="onGuardar()">Guardar</ion-button>
+     
+  
+  </div>
+
+ </div>
+</ion-content>
